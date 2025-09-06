@@ -1,0 +1,160 @@
+/* styles.css - Design Elegante para Receitas */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f4f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #d4a373;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+}
+
+nav {
+    background-color: #e8d5b7;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #5e3c2a;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4a373;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+    transform: scale(1.02);
+}
+
+.card-header {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-header h2 {
+    color: #5e3c2a;
+    font-family: 'Georgia', serif;
+    margin: 0 0 1rem;
+}
+
+.recipe-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #5e3c2a;
+}
+
+.ingredients, .instructions {
+    margin-top: 1rem;
+}
+
+.ingredients ul, .instructions ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ingredients li, .instructions li {
+    background-color: #f8f4f0;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #d4a373;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 0 0.5rem;
+    }
+
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
